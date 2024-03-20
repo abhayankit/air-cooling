@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;box-sizing: border-box; font-family: monospace;}
+body
+{
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(#327a42, #483f1e);
+}
+html
+{
+    scroll-behavior: smooth;
+}
+#header
+{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    background-color: #710909;
+
+}
+.fa-landmark
+{
+    font-size: 20px;
+    display: none !important;
+    cursor: pointer;
+}
+.container
+{
+    padding: 5px 5%;
+}
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo
+{
+    width: 140px;
+}
+nav ul li
+{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px;
+}
+nav ul li a
+{
+    color:#fff ;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after
+{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after
+{
+    width: 100%;
+}
+/*-----------text---------*/
+#home
+{
+    width: 100%;
+}
+.some h1
+{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    color: #fff;
+    padding: 100px 0px;
+}
+.some h2
+{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+    color: #ff0404;
+}
+.some p
+{
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: 400;
+}
+span
+{
+    color: chartreuse;
+}
+.images
+{
+    width: 90%;
+    height: 580px;
+    margin: 5% auto;
+    background-image: url(images/image\ 3.jpg);
+    background-size: 100% 100%;
+    box-shadow: 2px 1px 2px 1px;
+    animation: Changeimage 20s linear infinite;
+}
+@keyframes Changeimage {
+    0%{
+        background-image: url(images/repare.avif);
+    }
+    25%{
+        background-image: url(images/re-3.avif);
+    }
+    50%{
+        background-image: url(images/profile.avif);
+    }
+    75%{
+        background-image: url(images/ins.avif);
+    }
+    100%{
+        background-image: url(images/re-1.avif);
+    }
+}
+.bottom-wrapper
+{
+    position: relative;
+    display: table;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+.left
+{
+    width: 33%;
+    padding: 40px;
+    float: left;
+    display: block;
+    color: #fff;
+}
+.left h2
+{
+    text-align: center;
+    text-transform: capitalize;
+}
+form label
+{
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+.left input
+{
+    padding: 5px 14px;
+    margin: 10px;
+}
+.box-left
+{
+    width: 33%;
+    padding: 40px;
+    float: left;
+    display: block;
+    color: #fff;
+}
+button
+{
+    padding: 5px 20px;
+    margin: 10px;
+    position:relative;
+    left: 50px;
+    
+}
+div h3
+{
+    font-size: 30px;
+    margin: 10px;
+}
+div a
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+
+    text-transform: capitalize;
+
+}
+.box-right
+{
+    width: 33%;
+    padding: 40px;
+    float: right;
+    display: block;
+    color: #fff;
+}
+.box-right h2
+{
+    text-align: left;
+    font-size: 30px;
+    margin: 10px;
+}
+.box-right p
+{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 10px;
+}
+.box-right span
+{
+    font-size: 20px;
+}
+.box-right a
+{
+    font-size: 16px;
+    text-transform: lowercase;
+}
+.create h4
+{
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+}
+/*------------small screen-----------*/
+@media  (max-width:600px)
+{
+    nav
+    {
+        font-size: 14px;
+    }
+    .logo
+    {
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .fa-landmark
+    {
+        display: block !important;
+        font-size: 25px;
+        margin-top: 5px;
+        color :red;
+        cursor: pointer;
+    }
+    nav ul
+    {
+        background:rgb(0, 183, 224);
+        position: fixed;
+        text-align: center;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 70vh;
+        padding-top:50px;
+        z-index: 2;
+    }
+    nav ul li
+    {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-landmark
+    {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        color: rgb(9, 5, 5);
+        cursor: pointer;
+    }
+    .some h1
+    {
+        font-size: 18px;
+        width:100%;
+    }
+    .some h2
+    {
+        font-size: 18px;
+        width:100%;
+    }
+    .some p
+    {
+        font-size: 18px;
+        width:100%;
+    }
+    .images
+    {
+        width: 100%;
+        height: 350px;
+        border-radius: 50px 0px 50px 0px ;
+    }
+    .left
+    {
+        display: block;
+        width:100%;
+
+    }
+    .box-left
+    {
+        display: block;
+        width: 100%;
+    }
+    .box-right
+    {
+        display: block;
+        width: 100%;
+    }
+
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav >
+                <img src="images/ac logo.avif" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="company.html">company profile</a></li>
+                    <li><a href="our.html">our Service</a></li>
+                    <li><a href="blog.html">blogs</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="tel:+916287221693"><i class="fa-solid fa-phone-volume"></i></a></li>
+                    <i class="fa-solid fa-landmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-landmark" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+    <!-------text--->
+    <div id="home">
+        <div class="some">
+            <h1>How to Choose the Right Air Conditioner Repair Service!</h1>
+            <p>Learn about the important factors to consider when selecting an air conditioner repair service. Find out what questions to ask and what to look for in a reliable and trustworthy service provider.</p>
+        </div>
+    </div>
+    <div class="images"></div>
+    <div id="home">
+        <div class="some">
+        <p>Choosing the right <span> <b> air conditioner repair service </b></span>can save you time, money, and frustration. With so many options available, it's important to know what to look for. In this blog post, we will discuss the key factors to consider when selecting a repair service. From experience and expertise to pricing and customer reviews, we will cover everything you need to make an informed decision. Don't settle for anything less than the best when it comes to your<span> <b> air conditioner repair needs</b></span>.</p>
+        </div>
+    </div>
+<!-------footer----------->
+<div id="bottom">
+    <div class="bottom-wrapper">
+        <div class="left">
+            <h2>subscribe for our latest update</h2>
+            <form>
+                <label>Email</label>
+                <input type="email" placeholder="Email" required>
+                <br>
+                <button>subscribe</button>
+            </form>
+            </div>
+        <div class="box-left">
+            <div>
+                <h3>Quick links</h3>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="company.html">company profile</a></li>
+                    <li><a href="our.html">our service</a></li>
+                    <li><a href="blog.html">latest update</a></li>
+                    <li><a href="contact.html">contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-right">
+            <h2>location</h2>
+            <p>G 374 Mohan nagar Ghaziabad Sahibabad Uttarpardesh 201005</p>
+                <span>Email:</span><a href="mailto:abhaysah462@gmail.com">abhaysah462@gmail.com</a>
+            <span>Phone:</span><a href="tel:+916287221693">+916287221693</a>
+        </div>
+    </div>
+</div>
+<!----create-->
+<div class="create">
+    <h4>Developed and Managed by abhay <a href="https://abhayankit.github.io/abhay.resume/">abhay.com</a></h4>
+</div>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-100%";
+    }
+
+</script>
+
+
+</body>
+</html>
